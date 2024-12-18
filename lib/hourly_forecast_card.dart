@@ -29,8 +29,9 @@ class HourlyForecastCard extends StatelessWidget {
             children: [
               Text(
                 time,
+                overflow: TextOverflow.visible,
                 style: const TextStyle(
-                  fontSize: 25,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
