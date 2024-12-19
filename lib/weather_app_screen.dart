@@ -55,9 +55,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
         actions: [
           IconButton(
               onPressed: () {
-                setState(() {
-                  debugPrint('Set State called ');
-                });
+                setState(
+                  () {
+                    _weatherFuture = getCurrentWeather();
+                    // debugPrint('Set State called ');
+                  },
+                );
               },
               icon: const Icon(Icons.refresh)),
         ],
